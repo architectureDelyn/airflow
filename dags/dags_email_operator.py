@@ -10,7 +10,7 @@ with DAG(
     catchup=False
 ) as dag:
     send_eamil_task = EmailOperator(
-        task_id="sedn_eamil_task",
+        task_id='send_eamil_task',
         to='wjdalsgur12@naver.com',
         subject='Airflow 성공메일',
         html_content='Airflow 작업이 완료되었습니다.'
