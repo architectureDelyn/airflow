@@ -9,8 +9,7 @@ with DAG(
     start_date=pendulum.datetime(2025, 3, 6, tz="Asia/Seoul"),
     catchup=False
 ) as dag:
-    
-    sedn_eamil_task = EmailOperator(
+    send_eamil_task = EmailOperator(
         task_id="sedn_eamil_task",
         to='wjdalsgur12@naver.com',
         subject='Airflow 성공메일',
